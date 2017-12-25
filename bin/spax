@@ -1,0 +1,10 @@
+#!/usr/bin/env node --harmony
+
+const commander = require('commander')
+const pkg = require('../package.json')
+
+commander
+  .version(pkg.version)
+  .usage('<command> [options]')
+  .command('dev', 'start a server with HMR in local')
+  .parse(process.argv)
